@@ -1,0 +1,23 @@
+if(head.next==null){
+  head=null;
+  return head;
+}else{
+  ListNode list = new ListNode(0);
+  ListNode list1=list;
+  int arr[]=new int[30];
+  int i=0;
+  while(head!=null){
+    arr[i]=head.val;
+    head=head.next;
+    i++;
+  }
+  int j=i-n;
+  for(int m=0;m<i;m++){
+    if(m!=j){
+      list1.next=new ListNode(arr[m]);
+      list1=list1.next;
+    }
+  }
+return list.next;
+}
+
